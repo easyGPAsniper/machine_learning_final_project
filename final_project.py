@@ -98,8 +98,9 @@ min_depth, max_depth = get_min_and_max_depth(alldata)
 
 transforms_train = transforms.Compose([
 #     transforms.RandomInvert(),
-#     transforms.RandomPosterize(bits=2),
 #     transforms.ColorJitter(brightness=1.5,contrast=1.5, hue=0.5),
+#     transforms.RandomPosterize(bits=2),
+
     transforms.ToTensor(),
     transforms.Normalize(mean = means, std = stds) # normalization
 ])
